@@ -15,10 +15,10 @@ target '${POD_NAME}' do
 
 end
 
-target '${POD_NAME}_EXAMPLE' do
+target 'Example' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
-  # Pods for ${POD_NAME}_EXAMPLE
+  # Pods for Example
 
 end
