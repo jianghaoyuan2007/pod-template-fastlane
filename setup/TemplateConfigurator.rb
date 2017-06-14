@@ -58,9 +58,9 @@ module Pod
 
       FileUtils.mv "POD_NAME.xcodeproj", "#{@pod_name}.xcodeproj"
       
-      FileUtils.mv "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/POD_NAME.xcscheme", "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/#{@pod_name}.xcscheme"
+      # FileUtils.mv "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/POD_NAME.xcscheme", "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/#{@pod_name}.xcscheme"
             
-      FileUtils.mv "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/POD_NAMETests.xcscheme", "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/#{@pod_name}Tests.xcscheme"
+      # FileUtils.mv "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/POD_NAMETests.xcscheme", "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/#{@pod_name}Tests.xcscheme"
       
       FileUtils.mv "POD_NAMETests", "#{@pod_name}Tests"
       
