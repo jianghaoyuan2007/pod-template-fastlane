@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  POD_NAME_EXAMPLE
+//  Example
 //
 //  Created by Stephen Chiang on 14/06/2017.
 //
