@@ -30,9 +30,9 @@ module Pod
 
 	  def run
 
-      @homepage = self.ask("What is your homepage").to_sym
+      # @homepage = self.ask("What is your homepage").to_sym
 
-      @git_source = self.ask("What is your git source").to_sym
+      # @git_source = self.ask("What is your git source").to_sym
 
       remove_podfile_lock
 
@@ -42,7 +42,7 @@ module Pod
 
       reinitialize_git_repo
       
-      # run_pod_install
+      run_pod_install
     end
 
     def remove_podfile_lock
