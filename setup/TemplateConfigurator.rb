@@ -29,7 +29,6 @@ module Pod
     end
 
 	  def run
-      @message_bank.welcome_message
 
       @homepage = self.ask("What is your homepage?").to_sym
 
@@ -38,8 +37,7 @@ module Pod
       replace_variables_in_files
 
       rename_template_files
-
-      @message_bank.farewell_message
+      
     end
 
     def rename_template_files
