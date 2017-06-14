@@ -34,6 +34,8 @@ module Pod
 
       @git_source = self.ask("What is your git source").to_sym
 
+      remove_podfile_lock
+
       replace_variables_in_files
 
       rename_template_files
@@ -41,6 +43,11 @@ module Pod
       reinitialize_git_repo
       
       run_pod_install
+    end
+
+    def remove_podfile_lock
+
+      `rm -rf Podfile.lock`
     end
 
     def rename_template_files
