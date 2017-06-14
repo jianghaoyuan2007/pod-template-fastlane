@@ -38,6 +38,9 @@ module Pod
 
       rename_template_files
 
+      reinitialize_git_repo
+      
+      run_pod_install
     end
 
     def rename_template_files
@@ -88,6 +91,22 @@ module Pod
 	    end
 
 	    return file_names
+    end
+
+    def reinitialize_git_repo
+      `rm -rf .git`
+      `git init`
+      `git add -A`
+    end
+
+    def run_pod_install
+      puts "\nRunning " + "pod install".magenta + " on your new library."
+      puts ""
+
+      system "pod install"
+
+      `git add -A`
+      `git commit -m "Initial commit"`
     end
 
   end
