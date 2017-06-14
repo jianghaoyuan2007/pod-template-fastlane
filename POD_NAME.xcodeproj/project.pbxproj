@@ -624,12 +624,16 @@
 		2C725DEC1EF0C511009B6E59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		2C725DED1EF0C511009B6E59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -869,6 +873,7 @@
 				2C3363D81EF1328400E40807 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C725DEB1EF0C511009B6E59 /* Build configuration list for PBXProject "POD_NAME" */ = {
 			isa = XCConfigurationList;
