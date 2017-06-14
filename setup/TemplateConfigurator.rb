@@ -49,14 +49,10 @@ module Pod
       
       FileUtils.mv "Sources/POD_NAME.h", "Sources/#{@pod_name}.h"
 
-      FileUtils.mv "POD_NAME_EXAMPLE", "#{@pod_name}_EXAMPLE"
-
       FileUtils.mv "POD_NAME.xcodeproj", "#{@pod_name}.xcodeproj"
       
       FileUtils.mv "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/POD_NAME.xcscheme", "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/#{@pod_name}.xcscheme"
-      
-      FileUtils.mv "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/POD_NAME_EXAMPLE.xcscheme", "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/#{@pod_name}_EXAMPLE.xcscheme"
-      
+            
       FileUtils.mv "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/POD_NAMETests.xcscheme", "#{@pod_name}.xcodeproj/xcshareddata/xcschemes/#{@pod_name}Tests.xcscheme"
       
       FileUtils.mv "POD_NAMETests", "#{@pod_name}Tests"
@@ -80,7 +76,7 @@ module Pod
 
 	    file_names = ['POD_NAME.podspec', 'CHANGELOG.md', 'LICENSE', 'Podfile']
 
-	    dirs = ['POD_NAME_EXAMPLE', 'POD_NAMETests', 'Sources', 'POD_NAME.xcodeproj']
+	    dirs = ['Example', 'POD_NAMETests', 'Sources', 'POD_NAME.xcodeproj']
 
 	    dirs.each do |dir|
   		  Find.find(dir) do |file_name|
