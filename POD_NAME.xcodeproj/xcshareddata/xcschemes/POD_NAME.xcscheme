@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C725DF21EF0C528009B6E59"
-               BuildableName = "POD_NAME.framework"
-               BlueprintName = "POD_NAME"
-               ReferencedContainer = "container:POD_NAME.xcodeproj">
+               BuildableName = "${POD_NAME}.framework"
+               BlueprintName = "${POD_NAME}"
+               ReferencedContainer = "container:${POD_NAME}.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "2C725DFB1EF0C528009B6E59"
                BuildableName = "POD_NAMETests.xctest"
                BlueprintName = "POD_NAMETests"
-               ReferencedContainer = "container:POD_NAME.xcodeproj">
+               ReferencedContainer = "container:${POD_NAME}.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C725DF21EF0C528009B6E59"
-            BuildableName = "POD_NAME.framework"
-            BlueprintName = "POD_NAME"
-            ReferencedContainer = "container:POD_NAME.xcodeproj">
+            BuildableName = "${POD_NAME}.framework"
+            BlueprintName = "${POD_NAME}"
+            ReferencedContainer = "container:${POD_NAME}.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C725DF21EF0C528009B6E59"
-            BuildableName = "POD_NAME.framework"
-            BlueprintName = "POD_NAME"
-            ReferencedContainer = "container:POD_NAME.xcodeproj">
+            BuildableName = "${POD_NAME}.framework"
+            BlueprintName = "${POD_NAME}"
+            ReferencedContainer = "container:${POD_NAME}.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C725DF21EF0C528009B6E59"
-            BuildableName = "POD_NAME.framework"
-            BlueprintName = "POD_NAME"
-            ReferencedContainer = "container:POD_NAME.xcodeproj">
+            BuildableName = "${POD_NAME}.framework"
+            BlueprintName = "${POD_NAME}"
+            ReferencedContainer = "container:${POD_NAME}.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

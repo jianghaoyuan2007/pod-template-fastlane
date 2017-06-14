@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C725E0E1EF0C56E009B6E59"
-               BuildableName = "POD_NAME_EXAMPLE.app"
-               BlueprintName = "POD_NAME_EXAMPLE"
-               ReferencedContainer = "container:POD_NAME.xcodeproj">
+               BuildableName = "${POD_NAME}_EXAMPLE.app"
+               BlueprintName = "${POD_NAME}_EXAMPLE"
+               ReferencedContainer = "container:${POD_NAME}.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C725E261EF0C56E009B6E59"
-               BuildableName = "POD_NAME_EXAMPLETests.xctest"
-               BlueprintName = "POD_NAME_EXAMPLETests"
-               ReferencedContainer = "container:POD_NAME.xcodeproj">
+               BuildableName = "${POD_NAME}_EXAMPLETests.xctest"
+               BlueprintName = "${POD_NAME}_EXAMPLETests"
+               ReferencedContainer = "container:${POD_NAME}.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C725E0E1EF0C56E009B6E59"
-            BuildableName = "POD_NAME_EXAMPLE.app"
-            BlueprintName = "POD_NAME_EXAMPLE"
-            ReferencedContainer = "container:POD_NAME.xcodeproj">
+            BuildableName = "${POD_NAME}_EXAMPLE.app"
+            BlueprintName = "${POD_NAME}_EXAMPLE"
+            ReferencedContainer = "container:${POD_NAME}.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C725E0E1EF0C56E009B6E59"
-            BuildableName = "POD_NAME_EXAMPLE.app"
-            BlueprintName = "POD_NAME_EXAMPLE"
-            ReferencedContainer = "container:POD_NAME.xcodeproj">
+            BuildableName = "${POD_NAME}_EXAMPLE.app"
+            BlueprintName = "${POD_NAME}_EXAMPLE"
+            ReferencedContainer = "container:${POD_NAME}.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C725E0E1EF0C56E009B6E59"
-            BuildableName = "POD_NAME_EXAMPLE.app"
-            BlueprintName = "POD_NAME_EXAMPLE"
-            ReferencedContainer = "container:POD_NAME.xcodeproj">
+            BuildableName = "${POD_NAME}_EXAMPLE.app"
+            BlueprintName = "${POD_NAME}_EXAMPLE"
+            ReferencedContainer = "container:${POD_NAME}.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
