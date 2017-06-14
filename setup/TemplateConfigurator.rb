@@ -83,7 +83,7 @@ module Pod
 
 	    file_names = ['POD_NAME.podspec', 'CHANGELOG.md', 'LICENSE', 'Podfile']
 
-	    dirs = ['Example', 'POD_NAMETests', 'Sources', 'POD_NAME.xcodeproj']
+	    dirs = ['Example', 'POD_NAMETests', 'Sources', 'POD_NAME.xcodeproj', 'fastlane']
 
 	    dirs.each do |dir|
   		  Find.find(dir) do |file_name|
