@@ -42,7 +42,7 @@ module Pod
 
       reinitialize_git_repo
       
-      run_pod_install
+      # run_pod_install
     end
 
     def remove_podfile_lock
