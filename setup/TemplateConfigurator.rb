@@ -30,14 +30,14 @@ module Pod
 
 	  def run
 
-      @homepage = self.ask("What is your homepage?").to_sym
+      @homepage = self.ask("What is your homepage").to_sym
 
-      @git_source = self.ask("What is your git source?").to_sym
+      @git_source = self.ask("What is your git source").to_sym
 
       replace_variables_in_files
 
       rename_template_files
-      
+
     end
 
     def rename_template_files
@@ -58,7 +58,7 @@ module Pod
       
       FileUtils.mv "POD_NAMETests", "#{@pod_name}Tests"
       
-      FileUtils.mv "#{@pod_name}Tests/POD_NAMETests.m", "BananaTests/#{@pod_name}Tests.m"
+      FileUtils.mv "#{@pod_name}Tests/POD_NAMETests.m", "#{@pod_name}Tests/#{@pod_name}Tests.m"
     end
 
     def replace_variables_in_files
