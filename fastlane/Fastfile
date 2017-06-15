@@ -26,9 +26,11 @@ lane :ci_commit do |options|
   
   build_example(configuration: configuration)
 
-  af_pod_spec_lint(
+  #pod spec lint
+  sf_pod_spec_lint(
     quick:true,
-    allow_warnings:true
+    sources: [ENV["PRIVATE_POD_SOURCE"], ENV["COCOAPODS_SOURCE"]],
+    allow_warnings: true
   )
 end
 
@@ -306,10 +308,19 @@ lane :complete_framework_release do |options|
   
   #pod trunk push
   if options[:skip_pod_push] != true
-    pod_push
+    pod_push(
+      repo: ENV["REPO_NAME"],
+      allow_warnings: true,
+      use_libraries: true,
+      sources: [ENV["PRIVATE_POD_SOURCE"], ENV["COCOAPODS_SOURCE"]],
+      verbose: true
+    )
     
     #pod spec lint
-    af_pod_spec_lint
+    sf_pod_spec_lint(
+      sources: [ENV["PRIVATE_POD_SOURCE"], ENV["COCOAPODS_SOURCE"]],
+      allow_warnings: true
+    )
   end
   
   if options[:skip_closing_github_milestone] != true
@@ -321,6 +332,15 @@ lane :complete_framework_release do |options|
       state: "closed"
     )
   end
+end
+
+lane :test_pod_spec_lint do |options|
+
+  sf_pod_spec_lint(
+    sources: [ENV["PRIVATE_POD_SOURCE"], ENV["COCOAPODS_SOURCE"]],
+    use_libraries: true,
+    allow_warnings: true
+  )
 end
 
 
