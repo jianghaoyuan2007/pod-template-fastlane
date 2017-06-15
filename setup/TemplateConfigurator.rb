@@ -43,6 +43,13 @@ module Pod
       reinitialize_git_repo
       
       run_pod_install
+
+      remove_configure_file
+    end
+
+    def remove_configure_file
+
+      `rm -rf configure`
     end
 
     def remove_podfile_lock
