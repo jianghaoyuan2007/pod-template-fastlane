@@ -30,9 +30,9 @@ module Pod
 
 	  def run
 
-      @homepage = self.ask("What is your homepage").to_sym
+      @homepage = self.ask("What is your homepage").to_s
 
-      @git_source = self.ask("What is your git source").to_sym
+      @git_source = self.ask("What is your git source").to_s
 
       remove_podfile_lock
 
