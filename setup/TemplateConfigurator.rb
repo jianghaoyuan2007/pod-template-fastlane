@@ -30,9 +30,9 @@ module Pod
 
 	  def run
 
-      # @homepage = self.ask("What is your homepage").to_sym
+      @homepage = self.ask("What is your homepage").to_sym
 
-      # @git_source = self.ask("What is your git source").to_sym
+      @git_source = self.ask("What is your git source").to_sym
 
       remove_podfile_lock
 
@@ -74,6 +74,8 @@ module Pod
 	    file_names.each do |file_name|
         text = File.read(file_name)
         text.gsub!("${POD_NAME}", @pod_name)
+        text.gsub!("${HOMEPAGE}", @homepage)
+        text.gsub!("${GIT_SOURCE}", @git_source)
         File.open(file_name, "w") { |file| file.puts text }
       end	
 
