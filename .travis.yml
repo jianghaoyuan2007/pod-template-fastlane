@@ -13,10 +13,10 @@ matrix:
       env: FASTLANE_LANE=code_coverage FASTLANE_ENV=default
     - osx_image: xcode8.3
       env: FASTLANE_ENV=ios103_xcode8
-    - osx_image: xcode7.3
-      env: FASTLANE_ENV=ios93_xcode73
-    - osx_image: xcode7.3
-      env: FASTLANE_ENV=ios83_xcode73
+    # - osx_image: xcode7.3
+    #   env: FASTLANE_ENV=ios93_xcode73
+    # - osx_image: xcode7.3
+    #   env: FASTLANE_ENV=ios83_xcode73
 before_install:
   # Force bundler 1.12.5 because version 1.13 has issues, see https://github.com/fastlane/fastlane/issues/6065#issuecomment-246044617
   - gem install bundler --no-rdoc --no-ri --no-document --quiet

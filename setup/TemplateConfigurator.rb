@@ -46,8 +46,10 @@ module Pod
 
       reinitialize_git_repo
 
+      add_git_remote
+
       clean_template_files
-      
+
       remove_configure_file
       
       run_pod_install
@@ -67,6 +69,11 @@ module Pod
     def clean_template_files
 
       `rm -rf setup`
+    end
+
+    def add_git_remote
+
+      `git remote add origin #{@git_source}`
     end
 
     def rename_template_files
@@ -138,26 +145,3 @@ module Pod
   end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

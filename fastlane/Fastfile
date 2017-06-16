@@ -32,6 +32,7 @@ lane :ci_commit do |options|
     sources: [ENV["PRIVATE_POD_SOURCE"], ENV["COCOAPODS_SOURCE"]],
     use_libraries: true,
     allow_warnings: true,
+    quick: true,
     verbose: true
   )
 end
