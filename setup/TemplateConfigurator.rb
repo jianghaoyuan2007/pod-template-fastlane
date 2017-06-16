@@ -6,7 +6,7 @@ module Pod
 
   class TemplateConfigurator
   	
-  	attr_reader :pod_name, :homepage, :git_source
+  	attr_reader :pod_name, :homepage, :git_source, :github_username, :github_repo_name
 
   	def initialize(pod_name)
       @pod_name = pod_name
@@ -33,6 +33,10 @@ module Pod
       @homepage = self.ask("What is your homepage").to_s
 
       @git_source = self.ask("What is your git source").to_s
+
+      @github_username = self.ask("What is the GitHub username").to_s
+
+      @github_repo_name = self.ask("What is the GitHub repo name").to_s
 
       remove_podfile_lock
 
@@ -83,6 +87,8 @@ module Pod
         text.gsub!("${POD_NAME}", @pod_name)
         text.gsub!("${HOMEPAGE}", @homepage)
         text.gsub!("${GIT_SOURCE}", @git_source)
+        text.gsub!("${GITHUB_USERNAME}", @github_username)
+        text.gsub!("${GITHUB_REPO_NAME}", @github_repo_name)
         File.open(file_name, "w") { |file| file.puts text }
       end	
 
@@ -90,7 +96,7 @@ module Pod
 
     def replace_variables_files
 
-	    file_names = ['POD_NAME.podspec', 'CHANGELOG.md', 'LICENSE', 'Podfile']
+	    file_names = ['POD_NAME.podspec', 'CHANGELOG.md', 'LICENSE', 'Podfile', 'README.md']
 
 	    dirs = ['Example', 'POD_NAMETests', 'Sources', 'POD_NAME.xcodeproj', 'fastlane']
 
