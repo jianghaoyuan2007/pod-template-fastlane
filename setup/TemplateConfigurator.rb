@@ -46,6 +46,8 @@ module Pod
 
       reinitialize_git_repo
 
+      clean_template_files
+      
       remove_configure_file
       
       run_pod_install
@@ -60,6 +62,11 @@ module Pod
     def remove_podfile_lock
 
       `rm -rf Podfile.lock`
+    end
+
+    def clean_template_files
+
+      `rm -rf setup`
     end
 
     def rename_template_files
