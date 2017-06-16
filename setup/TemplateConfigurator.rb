@@ -45,10 +45,11 @@ module Pod
       rename_template_files
 
       reinitialize_git_repo
+
+      remove_configure_file
       
       run_pod_install
 
-      remove_configure_file
     end
 
     def remove_configure_file
