@@ -1,4 +1,6 @@
-# Uncomment the next line to define a global platform for your project
+source 'https://github.com/jianghaoyuan2007/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '8.0'
 
 target '${POD_NAME}' do

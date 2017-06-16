@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 
 fastlane_version "2.36.0"
 
@@ -28,9 +29,10 @@ lane :ci_commit do |options|
 
   #pod spec lint
   sf_pod_spec_lint(
-    quick:true,
     sources: [ENV["PRIVATE_POD_SOURCE"], ENV["COCOAPODS_SOURCE"]],
-    allow_warnings: true
+    use_libraries: true,
+    allow_warnings: true,
+    verbose: true
   )
 end
 
@@ -319,7 +321,9 @@ lane :complete_framework_release do |options|
     #pod spec lint
     sf_pod_spec_lint(
       sources: [ENV["PRIVATE_POD_SOURCE"], ENV["COCOAPODS_SOURCE"]],
-      allow_warnings: true
+      use_libraries: true,
+      allow_warnings: true,
+      verbose: true
     )
   end
   
@@ -339,7 +343,8 @@ lane :test_pod_spec_lint do |options|
   sf_pod_spec_lint(
     sources: [ENV["PRIVATE_POD_SOURCE"], ENV["COCOAPODS_SOURCE"]],
     use_libraries: true,
-    allow_warnings: true
+    allow_warnings: true,
+    verbose: true
   )
 end
 

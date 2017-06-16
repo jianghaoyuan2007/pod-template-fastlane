@@ -21,6 +21,7 @@ module Fastlane
         if params[:use_libraries]
           commands << "--use-libraries"
         end
+
         if params[:allow_warnings]
           commands << "--allow-warnings"
         end
@@ -35,6 +36,10 @@ module Fastlane
 
         if params[:sources]
           commands << "--sources='#{params[:sources].join(",")}'"
+        end
+
+        if params[:verbose]
+          commands << "--verbose"
         end
 
         result = Actions.sh("#{commands.join(" ")}")
@@ -81,6 +86,10 @@ module Fastlane
                                                  is_string: true),
                     FastlaneCore::ConfigItem.new(key: :sources,
                                                  description: "Lint validates only the given sources",
+                                                 optional: true,
+                                                 is_string: false),
+                    FastlaneCore::ConfigItem.new(key: :verbose,
+                                                 description: "Print out extra information and all commands",
                                                  optional: true,
                                                  is_string: false),
         ]
